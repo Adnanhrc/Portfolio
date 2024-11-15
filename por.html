@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="por.css">
+    <script src="https://kit.fontawesome.com/beef98ad42.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <img src="data:image/png;base64,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"
+                    class="logo">
+                
+                
+            </nav>
+            <div class="header-text">
+                <p>FULL-STACK Developer</p>
+                <h1>Hi, I'm <span>Mohammad Adnan</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+    <!--------------------------about--------------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://avatars.githubusercontent.com/u/157475196?v=4">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hello, I’m Mohammad Adnan!
+                        I’m currently pursuing my MCA (Master of Computer Applications) from Invertis University. I
+                        recently completed my B.Sc. from Delhi University.
+
+                        I specialize in Full Stack Development, and I have a strong foundation in front-end
+                        technologies. My skills include HTML, CSS, JavaScript, React, and more. I also have a
+                        solid understanding of Data Structures and Algorithms (DSA), which allows me to write efficient
+                        and optimized code.
+
+                        I am passionate about problem-solving and continuously improving my technical skills. I enjoy
+                        working on challenging projects and always strive to learn and grow as a developer.
+
+                        Feel free to reach out to me if you want to discuss new opportunities or collaborate on
+                        projects!
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                            <li><span>DSA</span><br>Finding Optimised Solution</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Fresher</span><br>Pursuing Mca along with specializing my developing skills</li>
+                            <li><span>2021 - 2024</span><br>Learneda and practiced concepts of DSA, OOPS, DBMS, JAVA
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Pursuing Mca</li>
+                            <li><span>2021 - 2024</span><br>Delhi University (Hansraj Collage) - BSC(chemistry) (80%)
+                            </li>
+                            <li><span>2019 - 2021</span><br> 10th (95.5%) - 12th (96.6%) Takshashila Public School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------services------------------------ -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.fugiat esse nisi eveniet! Repudiandae
+                        quaerat.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.fugiat esse nisi eveniet! Repudiandae
+                        quaerat.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.fugiat esse nisi eveniet! Repudiandae
+                        quaerat.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ---------------portfolio------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img
+                        src="https://images.pexels.com/photos/5744248/pexels-photo-5744248.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you go the talented people around the world.
+                            Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img
+                        src="https://images.pexels.com/photos/7229110/pexels-photo-7229110.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you go the talented people around the world.
+                            Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img
+                        src="https://images.pexels.com/photos/8939267/pexels-photo-8939267.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you go the talented people around the world.
+                            Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- ---------------------contact----------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> mohammadnan88@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +91-8604423035</p>
+                    <div class="social-icons">
+                        <a href="https://leetcode.com/u/Adnanhrc/" target="_blank"><i class="fa-solid fa-code"></i></a>
+                        <a href="https://github.com/Adnanhrc" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/adnan.hrc/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/adnanhrc/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="/" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="form-status"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © VS Made with <i class="fa-solid fa-heart"></i> by Mohammad Adnan</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting the default way
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate input fields
+            if (name === "" || email === "" || message === "") {
+                alert("All fields are required!");
+                return;
+            }
+
+            // Simple email format validation
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Display success message (you can replace this with actual form submission)
+            document.getElementById('form-status').textContent = "Thank you for reaching out!,we got your response..";
+
+            // Clear form fields
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        });
+    </script>
+
+
+
+
+
+    <script>
+
+
+
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxQvTWG96UxL530KtoolwY271chYejNjj10rFxF-xgnkKefoquwozAX8m7Fj2YXhlZn/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
